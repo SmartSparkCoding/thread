@@ -2498,7 +2498,7 @@ footer .tiny { font-size: 16px; color: #5a5a70; }
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 26px;
-  max-width: 1080px;
+  width: min(1080px, 94vw);
   margin: 0 auto;
 }
 .cast {
@@ -2507,6 +2507,7 @@ footer .tiny { font-size: 16px; color: #5a5a70; }
   border-radius: 14px;
   padding: 22px 18px;
   text-align: center;
+  min-width: 0;
   transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
 }
 .cast:hover {

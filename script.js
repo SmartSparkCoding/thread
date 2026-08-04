@@ -62,7 +62,7 @@ const counterObserver = new IntersectionObserver(
 
 document.querySelectorAll("[data-to]").forEach((el) => counterObserver.observe(el));
 
-/* ---------- roaming :eyes_shaking: that follows the mouse ---------- */
+/* ---------- roaming 😵‍💫 that follows the mouse ---------- */
 const ghost = document.getElementById("cursor-emoji");
 let mx = window.innerWidth / 2;
 let my = window.innerHeight / 2;
@@ -104,17 +104,17 @@ function tryPassword() {
   pwdMsg.classList.add("denied");
 
   const denial = [
-    "ACCESS DENIED. wally remains unimpressed :cat-popcorn:",
+    "ACCESS DENIED. wally remains unimpressed 🍿",
     "ACCESS DENIED. lynn's lawyers have been informed.",
     "ACCESS DENIED. that's not it, and it never will be.",
     "ACCESS DENIED. dhyan can see this from the deployment logs, you know.",
     "ACCESS DENIED. even clubs26 wasn't it. and you knew that.",
     "ACCESS DENIED. " + (attempts > 5 ? "you really think the password is something that normal? respect the craft." : "try 'clubs26'. oh wait. you already did."),
-    "ACCESS DENIED. :cat-popcorn:",
+    "ACCESS DENIED. 🍿",
   ];
 
   if (guess === "give up" || guess === "i give up") {
-    pwdMsg.textContent = "> correct. giving up was always the right answer. :cat-popcorn:";
+    pwdMsg.textContent = "> correct. giving up was always the right answer. 🍿";
     pwdMsg.classList.add("granted");
     pwdMsg.classList.remove("denied");
   } else if (guess === "clubs26" || guess === "clubs-platform" || guess === "clubs2026") {
