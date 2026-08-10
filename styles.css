@@ -1,6 +1,6 @@
 /* ==========================================================================
    THE THREAD OF CLUB DOOM
-   one (1) nosy teenager · 780+ replies · soon™
+   one (1) nosy teenager · 765 replies · not over™
    ========================================================================== */
 
 * {
@@ -853,6 +853,18 @@ blockquote {
   margin-top: 10px;
   color: #c9c9e0;
 }
+.live-badge {
+  font-family: "Press Start 2P", monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  background: var(--red);
+  color: var(--cream);
+  border: 3px double var(--cream);
+  padding: 8px 14px;
+  transform: rotate(-2deg);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+.live-badge.in { transform: rotate(-2deg); }
 
 /* ==========================================================================
    11. THE GALLERY OF CHAOS
@@ -992,6 +1004,7 @@ footer .tiny { font-size: 16px; color: #5a5a70; }
   .board { height: 70vh; }
   .legal-sec { padding-left: 6vw; }
   .noir-sec { padding-left: 6vw; }
+  .score-board { grid-template-columns: 1fr; }
 }
 
 /* ==========================================================================
@@ -1079,6 +1092,7 @@ footer .tiny { font-size: 16px; color: #5a5a70; }
 .act5 { background: linear-gradient(140deg, #8a6d3b, #d9b46a); }
 .act6 { background: linear-gradient(140deg, #a3110b, #ff4fa3); }
 .act7 { background: linear-gradient(140deg, #0a4d3c, #2ecc71); }
+.act8 { background: linear-gradient(140deg, #5b2bd8, #ff4fa3); }
 
 /* ==========================================================================
    THE EYES INTERLUDE
@@ -2539,58 +2553,282 @@ footer .tiny { font-size: 16px; color: #5a5a70; }
   .board-chalk { padding: 24px 18px; }
 }
 
-/* ---- the lynn saga teaser ---- */
-.lynn-tease {
-  background:
-    radial-gradient(circle at 20% 30%, rgba(63, 123, 255, 0.35), transparent 45%),
-    radial-gradient(circle at 80% 70%, rgba(255, 79, 163, 0.3), transparent 45%),
-    #0e1226;
-  color: var(--cream);
+/* ==========================================================================
+   ACT VIII — THE REVEAL (great clubs refresh)
+   ========================================================================== */
+.refresh-sec {
+  background: linear-gradient(160deg, #fff8e7, #ffead2);
+  gap: 28px;
+}
+.refresh-title {
+  font-family: "Bangers", cursive;
+  font-size: clamp(44px, 8vw, 92px);
+  color: var(--red);
+  -webkit-text-stroke: 2px var(--ink);
+  transform: rotate(-1.5deg);
+}
+.refresh-title.in { transform: rotate(-1.5deg); }
+.refresh-sub {
+  font-family: "Comic Neue", sans-serif;
+  font-size: 18px;
+  color: #7a2a1f;
   text-align: center;
 }
-.tease-inner {
+.refresh-press {
+  width: min(680px, 94vw);
+  background: #fff;
+  border: 4px solid var(--ink);
+  box-shadow: 10px 10px 0 var(--red);
+  font-family: "Special Elite", monospace;
+}
+.press-date {
+  background: var(--ink);
+  color: var(--cream);
+  font-family: "Press Start 2P", monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  padding: 10px 16px;
+  text-align: center;
+}
+.press-headline {
+  font-family: "Bangers", cursive;
+  font-size: clamp(30px, 5vw, 52px);
+  line-height: 1;
+  color: var(--ink);
+  padding: 20px 24px 6px;
+  letter-spacing: 1px;
+}
+.press-sub {
+  font-family: "Caveat", cursive;
+  font-size: 22px;
+  color: #666;
+  padding: 0 24px 12px;
+}
+.press-body {
+  padding: 0 24px 20px;
+  font-family: "Special Elite", monospace;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #333;
+}
+.press-body p { margin-bottom: 10px; }
+.press-stamp {
+  border-top: 3px dashed var(--ink);
+  padding: 12px 24px;
+  font-family: "Permanent Marker", cursive;
+  font-size: 18px;
+  color: var(--red-dark);
+  text-align: center;
+  transform: rotate(-1deg);
+}
+.refresh-note {
+  width: min(560px, 94vw);
+  background: var(--ink);
+  color: var(--cream);
+  border: 4px solid var(--lime);
+  border-radius: 16px;
+  padding: 22px 26px;
+  text-align: center;
+  font-family: "Comic Neue", sans-serif;
+  font-size: 17px;
+  box-shadow: 8px 8px 0 var(--lime);
+  transform: rotate(1deg);
+}
+.refresh-note.in { transform: rotate(1deg); }
+.rn-big {
+  font-family: "Permanent Marker", cursive;
+  font-size: clamp(20px, 3vw, 28px);
+  color: var(--lime);
+  margin: 10px 0;
+}
+.rn-small { color: #b9b9c9; font-size: 15px; }
+
+/* ==========================================================================
+   THE SCORECARD
+   ========================================================================== */
+.score-sec {
+  background: var(--pink);
+  gap: 26px;
+}
+.score-title {
+  font-family: "Bangers", cursive;
+  font-size: clamp(44px, 8vw, 92px);
+  color: var(--cream);
+  -webkit-text-stroke: 2px var(--ink);
+  text-shadow: 6px 6px 0 var(--ink);
+  transform: rotate(-2deg);
+}
+.score-title.in { transform: rotate(-2deg); }
+.score-sub {
+  font-family: "Caveat", cursive;
+  font-size: 26px;
+  color: #3a0a1f;
+  text-align: center;
+}
+.score-board {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  width: min(980px, 94vw);
+}
+.score-col {
+  border-radius: 18px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: "Special Elite", monospace;
+  font-size: 16px;
+  line-height: 1.55;
+}
+.score-col.right {
+  background: #e8ffe8;
+  border: 4px solid #1d8a3c;
+  box-shadow: 8px 8px 0 #1d8a3c;
+}
+.score-col.wrong {
+  background: #ffe8e8;
+  border: 4px solid var(--red-dark);
+  box-shadow: 8px 8px 0 var(--red-dark);
+}
+.score-head {
+  font-family: "Permanent Marker", cursive;
+  font-size: clamp(20px, 2.6vw, 28px);
+  text-align: center;
+  padding-bottom: 8px;
+  border-bottom: 3px solid currentColor;
+}
+.score-col.right .score-head { color: #1d8a3c; }
+.score-col.wrong .score-head { color: var(--red-dark); }
+.score-item {
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 14px;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.15);
+}
+.score-col.right .score-item { border-left: 6px solid #1d8a3c; }
+.score-col.wrong .score-item { border-left: 6px solid var(--red); }
+.score-verdict {
+  font-family: "Permanent Marker", cursive;
+  font-size: clamp(18px, 2.6vw, 26px);
+  color: var(--cream);
+  text-shadow: 3px 3px 0 var(--ink);
+  text-align: center;
+}
+
+/* ==========================================================================
+   DELETED SCENES
+   ========================================================================== */
+.deleted-sec {
+  background: repeating-linear-gradient(135deg, #2a2a3a 0 20px, #23232f 20px 40px);
+  color: var(--cream);
+  gap: 26px;
+}
+.deleted-title {
+  font-family: "Bangers", cursive;
+  font-size: clamp(44px, 8vw, 92px);
+  color: var(--yellow);
+  -webkit-text-stroke: 2px var(--ink);
+  text-shadow: 6px 6px 0 var(--red);
+  transform: rotate(-2deg);
+}
+.deleted-title.in { transform: rotate(-2deg); }
+.deleted-sub {
+  font-family: "Comic Neue", sans-serif;
+  color: #b9b9c9;
+  font-size: 18px;
+  text-align: center;
+  max-width: 56ch;
+}
+.deleted-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  width: min(1000px, 94vw);
+}
+.dscene {
+  background: var(--cream);
+  color: var(--ink);
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 6px 6px 0 rgba(255, 255, 255, 0.12);
+  transform: rotate(-1deg);
+  transition: transform 0.2s ease;
+}
+.dscene:nth-child(even) { transform: rotate(1.2deg); }
+.dscene.in { transform: rotate(-1deg); }
+.dscene.in:nth-child(even) { transform: rotate(1.2deg); }
+.dscene:hover { transform: rotate(0) scale(1.03) !important; }
+.ds-tag {
+  font-family: "Press Start 2P", monospace;
+  font-size: 10px;
+  background: var(--red);
+  color: var(--cream);
+  padding: 6px 10px;
+  align-self: flex-start;
+  border-radius: 6px;
+}
+.dscene p {
+  font-family: "Special Elite", monospace;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.ds-note {
+  font-family: "Caveat", cursive;
+  font-size: 18px;
+  color: #666;
+}
+
+/* ==========================================================================
+   THE FINALE — TWIST + EYES_SHAKING
+   ========================================================================== */
+.twist-card {
+  width: min(620px, 92vw);
+  background: #14141f;
+  border: 4px solid var(--yellow);
+  border-radius: 18px;
+  padding: 24px 28px;
+  box-shadow: 10px 10px 0 var(--red);
+  transform: rotate(-1deg);
+  font-family: "Special Elite", monospace;
+  line-height: 1.6;
+  color: #e8e8f0;
+}
+.twist-card.in { transform: rotate(-1deg); }
+.twist-card:nth-of-type(even) { transform: rotate(1deg); }
+.twist-card:nth-of-type(even).in { transform: rotate(1deg); }
+.twist-quote {
+  font-family: "Permanent Marker", cursive;
+  font-size: clamp(20px, 3vw, 28px);
+  color: var(--yellow);
+  margin-bottom: 8px;
+}
+.twist-body { font-size: 16px; }
+.eyes-shake {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 18px;
-  max-width: 62ch;
+  gap: 10px;
 }
-.tease-tag {
-  font-family: "Press Start 2P", monospace;
-  font-size: 12px;
-  letter-spacing: 3px;
-  background: var(--pink);
-  color: var(--cream);
-  border: 3px double var(--cream);
-  padding: 8px 14px;
-  transform: rotate(-4deg);
-  box-shadow: 4px 4px 0 var(--ink);
-}
-.tease-title {
-  font-family: "Bangers", cursive;
-  font-size: clamp(44px, 8vw, 90px);
-  line-height: 0.95;
-  color: var(--yellow);
-  letter-spacing: 2px;
-  text-shadow: 4px 4px 0 var(--red);
-}
-.tease-body {
-  font-family: "Caveat", cursive;
-  font-size: clamp(20px, 3vw, 28px);
-  color: #d3cde8;
-  line-height: 1.4;
-}
-.tease-link {
-  font-family: "Permanent Marker", cursive;
-  font-size: clamp(18px, 2.6vw, 24px);
-  color: var(--ink);
-  background: var(--lime);
+.eyes-shake img {
+  width: 96px;
+  height: 96px;
+  image-rendering: pixelated;
   border: 3px solid var(--ink);
-  border-radius: 40px;
-  padding: 10px 24px;
-  text-decoration: none;
-  transform: rotate(1.5deg);
-  box-shadow: 5px 5px 0 var(--blue);
-  transition: transform 0.15s ease;
+  box-shadow: 6px 6px 0 var(--blue);
 }
-.tease-link:hover { transform: rotate(1.5deg) scale(1.06); }
+.eyes-label {
+  font-family: "Permanent Marker", cursive;
+  font-size: clamp(18px, 2.4vw, 24px);
+  color: var(--cream);
+}
+.eyes-caption {
+  font-family: "Press Start 2P", monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--lime);
+}
