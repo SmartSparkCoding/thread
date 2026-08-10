@@ -840,7 +840,8 @@
   <section class="sec popcorn-sec" data-section>
     <h2 class="rv popcorn-title">the official thread soundtrack</h2>
     <p class="rv popcorn-sub">you made it this far. you deserve a button.</p>
-    <button id="popcorn-btn" class="popcorn rv">🍿</button>
+    <audio id="sfx" src="https://cdn.hackclub.com/019febf1-591d-742c-b8b5-024f247a1b77/slack-new-message-sound-ui-sounds.mp3" preload="auto"></audio>
+    <button id="popcorn-btn" class="popcorn rv" onclick="sfx.currentTime=0;sfx.play()">🍿</button>
     <p id="popcorn-count" class="rv popcorn-count" data-delay="200">0 cats popped · every pop funds 0.00001 more replies to the thread</p>
   </section>
 
