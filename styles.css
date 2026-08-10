@@ -90,6 +90,12 @@ body {
   transform: translate(-50%, -50%) scale(1.7) rotate(10deg);
 }
 
+/* jacob adding some stuff here wowowowowoweroiutpqeoribnw;oiertbeswtnbwertbweportiuweorpibwptbu thread is cool am i right */
+
+.marquee:hover .mq-track {
+   animation-play-state: paused;
+}
+
 /* ---- reveal-on-scroll defaults ---- */
 .rv {
   opacity: 0;
